@@ -1,16 +1,18 @@
 ---
 import "@/styles/globals.css";
+import Navbar from "@/components/Navbar.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth" data-testid="html">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Mohamed Aziz Karoui | Software Developer</title>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold text-red-600">Astro</h1>
+  <body class="bg-slate-800 text-slate-400 font-mono">
+    <Navbar />
+    <main class="flex items-center justify-center flex-col"></main>
   </body>
 </html>

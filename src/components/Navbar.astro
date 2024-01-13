@@ -1,0 +1,95 @@
+---
+import {Button} from "@/components/ui/button";
+import {Astronav, MenuIcon, MenuItems} from "astro-navbar";
+import {Switch} from "@/components/ui/switch";
+
+const menuitems = [
+  {
+    title: "About",
+    path: "#about",
+  },
+  {
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+];
+---
+
+<header
+  data-testId="header"
+  class="my-6 flex flex-col px-16 items-center justify-between lg:flex-row"
+>
+  <Astronav>
+    <div class="flex w-full items-center justify-between lg:w-auto">
+      <Button className="font-bold" size={"sm"} name="Download CV">
+        Download CV
+      </Button>
+      <div class="flex justify-between lg:hidden">
+        <MenuIcon class="h-4 w-4" />
+      </div>
+    </div>
+    <MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+      <ul
+        class="flex flex-col justify-center items-center lg:flex-row lg:gap-3"
+      >
+        {
+          menuitems.map((item) => (
+            <>
+              <li>
+                <a
+                  aria-label="navigation link"
+                  href={item.path}
+                  class="flex py-2 lg:px-3"
+                >
+                  <Button className="font-bold" variant="ghost" size="lg">
+                    {item.title}
+                  </Button>
+                </a>
+              </li>
+            </>
+          ))
+        }
+        <li><Switch id="theme-switch" client:load /></li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function ready() {
+    const theme = document.getElementById("theme-switch");
+
+    const body = document.querySelector("body");
+    const lightTailWind = "bg-slate-400 text-slate-800 font-mono";
+    const darkTailWind = "bg-slate-800 text-slate-400 font-mono";
+
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      localStorage.setItem("theme", "dark");
+      body!.className = darkTailWind;
+    } else {
+      localStorage.setItem("theme", "light");
+      body!.className = lightTailWind;
+    }
+
+    const switchTheme = () => {
+      localStorage.setItem(
+        "theme",
+        localStorage.getItem("theme") === "dark" ? "light" : "dark"
+      );
+      if (localStorage.getItem("theme") === "dark") {
+        body!.className = darkTailWind;
+      } else {
+        body!.className = lightTailWind;
+      }
+    };
+    if (theme) {
+      theme.addEventListener("click", () => {
+        switchTheme();
+      });
+    }
+  });
+</script>
