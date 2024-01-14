@@ -2,6 +2,7 @@
 import {Button} from "@/components/ui/button";
 import {Astronav, MenuIcon, MenuItems} from "astro-navbar";
 import {Switch} from "@/components/ui/switch";
+import {Image} from "astro:assets";
 
 const menuitems = [
   {
@@ -19,17 +20,14 @@ const menuitems = [
 ];
 ---
 
-<header
-  data-testId="header"
-  class="my-6 flex flex-col px-16 items-center justify-between lg:flex-row"
->
+<header>
   <Astronav>
     <div class="flex w-full items-center justify-between lg:w-auto">
-      <Button className="font-bold" size={"sm"} name="Download CV">
-        Download CV
-      </Button>
+      <a href="#hero">
+        <Image src="/MAiKo26.svg" alt="logo" width={150} height={150} /></a
+      >
       <div class="flex justify-between lg:hidden">
-        <MenuIcon class="h-4 w-4" />
+        <MenuIcon class="h-6 w-6" />
       </div>
     </div>
     <MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
@@ -45,7 +43,12 @@ const menuitems = [
                   href={item.path}
                   class="flex py-2 lg:px-3"
                 >
-                  <Button className="font-bold" variant="ghost" size="lg">
+                  <Button
+                    className="font-bold text-xl"
+                    id="navbarbuttons"
+                    variant="ghost"
+                    size="lg"
+                  >
                     {item.title}
                   </Button>
                 </a>
@@ -64,15 +67,20 @@ const menuitems = [
     const theme = document.getElementById("theme-switch");
 
     const body = document.querySelector("body");
-    const lightTailWind = "bg-slate-400 text-slate-800 font-mono";
-    const darkTailWind = "bg-slate-800 text-slate-400 font-mono";
+    const header = document.querySelector("header");
+    const lightTailWind = "bg-slate-300 text-slate-900 font-mono";
+    const darkTailWind = "bg-slate-900 text-slate-300 font-mono";
 
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("theme", "dark");
       body!.className = darkTailWind;
+      header!.className =
+        "py-4 z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-900";
     } else {
       localStorage.setItem("theme", "light");
       body!.className = lightTailWind;
+      header!.className =
+        "py-4  z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-300";
     }
 
     const switchTheme = () => {
@@ -82,10 +90,15 @@ const menuitems = [
       );
       if (localStorage.getItem("theme") === "dark") {
         body!.className = darkTailWind;
+        header!.className =
+          "pt-4 z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-900";
       } else {
         body!.className = lightTailWind;
+        header!.className =
+          "pt-4 z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-300";
       }
     };
+
     if (theme) {
       theme.addEventListener("click", () => {
         switchTheme();

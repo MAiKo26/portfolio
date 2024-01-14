@@ -1,0 +1,44 @@
+---
+import heroImage from "@/assets/mypicture.jpg";
+import {Button} from "@/components/ui/button";
+import {Image} from "astro:assets";
+---
+
+<section
+  id="hero"
+  class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
+>
+  <div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
+    <div>
+      <h1 class="mb-10 mx-6 font-monospace text-3xl lg:text-4xl">
+        Hi! My name is <span class="text-sky-600">Mohamed Aziz Karoui</span> and
+        I am a Software Developer based in Tunisia.
+      </h1>
+    </div>
+    <div class="mb-10">
+      <a href="#about">
+        <Button
+          variant="default"
+          size="lg"
+          className="bg-sky-600 hover:bg-inherit hover:text-sky-600"
+          name="learn more"
+        >
+          Learn more
+        </Button></a
+      >
+    </div>
+  </div>
+  <div
+    id="hero-img"
+    class="mb-10 flex w-1/2 items-center justify-center rounded-full"
+  >
+    <Image
+      src={heroImage}
+      class="rounded-full"
+      alt="Profile Picture"
+      width={450}
+      height={450}
+      loading="eager"
+    />
+  </div>
+</section>
