@@ -1,5 +1,5 @@
 ---
-
+import {Image} from "astro:assets";
 ---
 
 <section id="about" class="flex items-center justify-center flex-col">
@@ -19,7 +19,13 @@
     <div
       class="mb-10 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2"
     >
-      <img />
+      <Image
+        alt="A Programmer on a Computer"
+        width={400}
+        height={400}
+        format="webp"
+        src="/Programmer-Engineering-Development-Illustration-on-transparent-background-PNG.png"
+      />
     </div>
 
     <div class="w-full text-justify">

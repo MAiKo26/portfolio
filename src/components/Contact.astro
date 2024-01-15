@@ -1,9 +1,13 @@
 ---
-
+import {Button} from "@/components/ui/button";
+import {Image} from "astro:assets";
 ---
 
-<section id="contact"></section>
-
-<style></style>
-
-<script></script>
+<section
+  class="lg:fixed lg:bottom-0 lg:left-20 lg:pb-0 pb-20 flex lg:flex-col flex-row items-center justify-center flex-wrap gap-4"
+>
+  <Image src="/github.svg" alt="github logo" width={50} height={50} />
+  <Image src="/linkedin.svg" alt="github logo" width={50} height={50} />
+  <Image src="/twitter.svg" alt="github logo" width={50} height={50} />
+  <div class="hidden lg:block bg-sky-600 h-32 w-1"></div>
+</section>

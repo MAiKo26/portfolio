@@ -3,7 +3,6 @@ import Card from "@/components/ui/Card.astro";
 import {getCollection} from "astro:content";
 
 const projects = await getCollection("projects");
-console.log(projects);
 ---
 
 <section
@@ -20,13 +19,13 @@ console.log(projects);
     {
       projects.map((project) => (
         <Card
-          url={project.data.link}
           image={project.data.image}
+          alt={project.data.img_alt}
           title={project.data.title}
           description={project.data.description}
-          alt={project.data.img_alt}
-          tags={project.data.tags}
+          github={project.data.github}
           demo={project.data.demo}
+          tags={project.data.tags}
         />
       ))
     }

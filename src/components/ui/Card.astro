@@ -6,10 +6,10 @@ import {Button} from "@/components/ui/button";
 import {Image} from "astro:assets";
 import {ChevronRightIcon} from "lucide-react";
 interface Props {
-  url?: string;
   alt?: string;
   image?: string;
   title?: string;
+  github?: string;
   description: string;
   tags: string[];
   children?: HTMLElement | HTMLElement[];
@@ -17,13 +17,13 @@ interface Props {
 }
 
 const {
-  url = "#",
   demo,
+  github,
   image = "/src/assets/project.png",
   alt = "Project image",
   description = "Project Description",
   title = "Project title",
-  tags = ["Tags"],
+  tags,
 } = Astro.props;
 ---
 
@@ -40,25 +40,34 @@ const {
         <h3 class="text-black text-xl text-orange lg:text-2xl">{title}</h3>
         <p class="text-black text-s">{description}</p>
       </div>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-row gap-2">
         {
-          demo ? (
-            <a href={url} aria-label="link to project">
-              <Button className=" w-1/2 bg-slate-900 hover:bg-sky-600">
+          github ? (
+            <a href={github} class="flex-1" aria-label="link to project">
+              <Button className="w-full bg-slate-900 hover:bg-sky-600">
                 Github Code
                 <ChevronRightIcon className=" bg-inherit h-4 w-4" />
               </Button>
             </a>
           ) : null
         }
-        <a href={url} aria-label="link to project">
-          <Button className=" w-1/2 bg-slate-900 hover:bg-sky-600">
-            Live Demo
-            <ChevronRightIcon className=" bg-inherit h-4 w-4" />
-          </Button></a
-        >
+        {
+          demo ? (
+            <a
+              href={demo}
+              target="_blank"
+              class="flex-1"
+              aria-label="link to project"
+            >
+              <Button className=" w-full bg-slate-900 hover:bg-sky-600">
+                Live Demo
+                <ChevronRightIcon className=" bg-inherit h-4 w-4" />
+              </Button>
+            </a>
+          ) : null
+        }
       </div>
-      <Tags tags={tags} />
+      {tags && <Tags tags={tags} />}
     </div>
   </article>
 </section>

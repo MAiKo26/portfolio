@@ -8,8 +8,8 @@ import {Image} from "astro:assets";
   id="hero"
   class="flex h-screen flex-col-reverse items-center justify-center text-center lg:flex-row"
 >
-  <div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
-    <div>
+  <div class="mb-10 flex flex-col items-center justify-center lg:mb-0 lg:w-3/5">
+    <div class="flex justify-center items-center">
       <h1 class="mb-10 mx-6 font-monospace text-3xl lg:text-4xl">
         Hi! My name is <span class="text-sky-600">Mohamed Aziz Karoui</span> and
         I am a Software Developer based in Tunisia.
@@ -30,7 +30,7 @@ import {Image} from "astro:assets";
   </div>
   <div
     id="hero-img"
-    class="mb-10 flex w-1/2 items-center justify-center rounded-full"
+    class="mb-10 flex w-2/5 items-center justify-center rounded-full"
   >
     <Image
       src={heroImage}
