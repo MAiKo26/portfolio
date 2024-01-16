@@ -27,12 +27,12 @@ const {
 } = Astro.props;
 ---
 
-<section class="w-full h-full p-4 md:w-1/2 lg:w-1/3">
+<section class="p-4 md:w-1/2 lg:w-1/3">
   <article
     data-testId="card"
     class="rounded-xl bg-white h-full p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
   >
-    <div class="relative flex items-end overflow-hidden rounded-xl">
+    <div class="hidden relative md:flex items-end overflow-hidden rounded-xl">
       <Image src={image} alt={alt} width={400} height={400} loading="eager" />
     </div>
     <div class="mt-1 p-2 flex flex-col gap-2 justify-between">
