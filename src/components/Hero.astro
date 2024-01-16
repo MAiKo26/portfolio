@@ -2,6 +2,7 @@
 import heroImage from "@/assets/mypicture.jpg";
 import {Button} from "@/components/ui/button";
 import {Image} from "astro:assets";
+import Icons from "./Icons.astro";
 ---
 
 <section
@@ -15,17 +16,8 @@ import {Image} from "astro:assets";
         I am a Software Developer based in Tunisia.
       </h1>
     </div>
-    <div class="mb-10">
-      <a href="#about">
-        <Button
-          variant="default"
-          size="lg"
-          className="bg-sky-600 hover:bg-inherit hover:text-sky-600"
-          name="learn more"
-        >
-          Learn more
-        </Button></a
-      >
+    <div class="mb-10 lg:hidden">
+      <Icons />
     </div>
   </div>
   <div

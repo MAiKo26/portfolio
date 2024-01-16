@@ -3,8 +3,13 @@ import {Button} from "@/components/ui/button";
 import {Astronav, MenuIcon, MenuItems} from "astro-navbar";
 import {Switch} from "@/components/ui/switch";
 import {Image} from "astro:assets";
+import Icons from "./Icons.astro";
 
 const menuitems = [
+  {
+    title: "Home",
+    path: "#hero",
+  },
   {
     title: "About",
     path: "#about",
@@ -13,26 +18,19 @@ const menuitems = [
     title: "Projects",
     path: "#projects",
   },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
 ];
 ---
 
 <header>
   <Astronav>
     <div class="flex w-full items-center justify-between lg:w-auto">
-      <a href="#hero">
-        <Image src="/MAiKo26.svg" alt="logo" width={150} height={150} /></a
-      >
-      <div class="flex justify-between lg:hidden">
-        <MenuIcon class="h-6 w-6" />
+      <div class="flex items-center w-full justify-between lg:hidden">
+        <MenuIcon class="h-6 w-6" /><Switch id="theme-switch" client:load />
       </div>
     </div>
     <MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto">
       <ul
-        class="flex flex-col justify-center items-center lg:flex-row lg:gap-3"
+        class="flex flex-col justify-center items-center lg:flex-row lg:gap-3 gap-1"
       >
         {
           menuitems.map((item) => (
@@ -41,7 +39,7 @@ const menuitems = [
                 <a
                   aria-label="navigation link"
                   href={item.path}
-                  class="flex py-2 lg:px-3"
+                  class="flex lg:py-2 lg:px-3"
                 >
                   <Button
                     className="font-bold text-xl"
@@ -56,7 +54,12 @@ const menuitems = [
             </>
           ))
         }
-        <li><Switch id="theme-switch" client:load /></li>
+        <li class="lg:hidden" id="onlywhennotatthetop">
+          <Icons />
+        </li>
+        <li class="hidden lg:block">
+          <Switch id="theme-switch" client:load />
+        </li>
       </ul>
     </MenuItems>
   </Astronav>
@@ -64,6 +67,25 @@ const menuitems = [
 
 <script>
   document.addEventListener("DOMContentLoaded", function ready() {
+    let myIcons = document.getElementById(
+      "onlywhennotatthetop"
+    ) as HTMLButtonElement;
+    window.onscroll = function (event) {
+      event.preventDefault();
+      showIcons();
+      console.log(myIcons);
+    };
+    myIcons.style.display = "none";
+    function showIcons() {
+      if (
+        document.body.scrollTop > 400 ||
+        document.documentElement.scrollTop > 400
+      ) {
+        myIcons.style.display = "block";
+      } else {
+        myIcons.style.display = "none";
+      }
+    }
     const theme = document.getElementById("theme-switch");
 
     const body = document.querySelector("body");
