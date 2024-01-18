@@ -1,8 +1,9 @@
 ---
 inProgress: false
 title: ProLab Mobile Tests
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
+description: ProLab Mobile Tests
+img_alt: Unit Tests
 github: https://www.github.com/MAiKo26/ProLabMobileTests
 tags: ["Java", "Academic Project"]
+id: 0
 ---

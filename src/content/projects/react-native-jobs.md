@@ -1,8 +1,9 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
-tags: ["Next.js", "React"]
+title: React Native Jobs
+description: React Native Jobs
+img_alt: Application Interface
+github:
+tags: ["React Native", "Personal Project"]
+id: 7
 ---

@@ -6,4 +6,5 @@ img_alt: DashBoard GRH-MC
 github: https://www.github.com/MAiKo26/GRH-MC
 demo:
 tags: ["VB.NET", "Java", "TeX", "Academic Project"]
+id: 1
 ---

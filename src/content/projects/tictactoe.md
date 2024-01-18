@@ -1,8 +1,9 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
-tags: ["Next.js", "React"]
+title: Tic Tac Toe
+description: Tic Tac Toe
+img_alt: Tic Tac Toe
+github: h
+tags: ["C++", "Personal Project"]
+id: 6
 ---

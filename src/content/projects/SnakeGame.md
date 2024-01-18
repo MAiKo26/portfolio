@@ -1,8 +1,9 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
-tags: ["Next.js", "React"]
+title: Snake Game
+description: Snake Game
+img_alt: Snake Game Preview
+github: h
+tags: ["C++", "Personal Project"]
+id: 3
 ---

@@ -1,8 +1,10 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
-tags: ["Next.js", "React"]
+title: Pixel Craft Hub
+description: Pixel Craft Hub
+img_alt: Pixel Craft Hub Home Page
+demo: g
+github: g
+tags: ["Next.js", "React", "Personal Project"]
+id: 8
 ---

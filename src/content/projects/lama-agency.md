@@ -1,8 +1,9 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
+title: Lama Agency
+description: Lama Agency
+img_alt: Lama Agency Home Page
+github:
 tags: ["Next.js", "React"]
+id: 11
 ---

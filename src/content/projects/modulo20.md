@@ -1,8 +1,10 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
-tags: ["Next.js", "React"]
+title: Modulo20
+description: Modulo20
+img_alt: Modulo20 Home Page
+github: h
+demo: https://www.homestructure.fr/
+tags: ["Next.js", "React", "Professional Project"]
+id: 5
 ---

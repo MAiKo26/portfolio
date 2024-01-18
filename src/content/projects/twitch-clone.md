@@ -1,8 +1,10 @@
 ---
 inProgress: false
-title: Structural Home
-description: An Android project that comprises a suite of tests for the ProlabMobile5 application.
-img_alt: Coding Image
-demo: https://www.structural-home.fr/
-tags: ["Next.js", "React"]
+title: Twitch Clone
+description: Twitch Clone
+img_alt: Twitch Clone
+demo: h
+github: h
+tags: ["Next.js", "React", "Personal Project"]
+id: 9
 ---
