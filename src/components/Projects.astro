@@ -3,19 +3,22 @@ import Card from "@/components/ui/Card.astro";
 import {getCollection} from "astro:content";
 
 const projects = await getCollection("projects");
+projects.sort((a, b) => a.data.id - b.data.id).reverse();
 ---
 
 <section
   id="projects"
-  class="mb-10 md:w-4/5 flex flex-col items-center justify-center md:mb-0"
+  class="mb-10 w-full px-5 flex flex-col items-center justify-center md:mb-0"
 >
   <h2
-    class="font-monospace text-sky-600 font-bold text-2xl text-orange lg:text-4xl"
+    class="font-monospace text-sky-600 font-bold text-3xl text-orange lg:text-4xl"
   >
     Projects
   </h2>
   <span class="mb-10 h-1 w-10 bg-sky-600"></span>
-  <div class="mb-10 flex md:w-4/5 flex-col flex-wrap items-center md:flex-row">
+  <div
+    class="mb-10 flex gap-5 flex-col flex-wrap items-center justify-center md:flex-row"
+  >
     {
       projects.map((project) => (
         <Card

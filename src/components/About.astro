@@ -1,12 +1,13 @@
 ---
 import {Image} from "astro:assets";
+import projectImage from "@/assets/project.png";
 ---
 
 <section id="about" class="flex items-center justify-center flex-col">
   <div>
     <div class="flex w-full flex-col items-center justify-center">
       <h2
-        class="font-monospace w-full text-2xl text-orange lg:text-4xl text-sky-600 font-bold"
+        class="font-monospace w-full text-3xl text-orange lg:text-4xl text-sky-600 font-bold"
       >
         About me
       </h2>
@@ -19,48 +20,35 @@ import {Image} from "astro:assets";
     <div
       class="mb-10 flex w-full flex-col items-center justify-center lg:mb-0 lg:w-1/2"
     >
-      <Image
+      <!-- <Image
         alt="A Programmer on a Computer"
         width={400}
         height={400}
         format="webp"
         src="/Programmer-Engineering-Development-Illustration-on-transparent-background-PNG.png"
+      /> -->
+      <Image
+        alt="A Programmer on a Computer"
+        width={400}
+        height={400}
+        format="webp"
+        src={projectImage}
       />
     </div>
 
     <div class="w-full text-justify">
       <div class="mb-2 px-8 lg:px-16 flex flex-col gap-4">
-        <p>
+        <p class="text-xs leading-7">
           I am a dynamic and skilled software developer with expertise in both
           front-end and back-end technologies. Proficient in languages such as
           JavaScript, TypeScript, Java, and C#, I have successfully contributed
           to the development of dynamic and responsive websites using frameworks
-          like Next.js, React, and Tailwind.
-        </p>
-        <p>
-          In my role as a Junior Front-End Developer at Zeta Technologies, I
-          actively participated in collaborative projects, enhancing web
-          applications with new features and optimizing code for improved
-          performance. My experience extends beyond front-end development to IT
-          infrastructure, where I played a key role in establishing networks and
-          implementing systems using technologies like Ubuntu Server and KVM.
-        </p><p>
-          I bring a well-rounded skill set, drawing from practical experiences
-          as a Software Developer Intern at Media Concept, where I designed
-          Windows applications, and as a Mobile Developer Intern at Sama
-          Consulting, where I contributed to mobile app development using Java.
-        </p><p>
-          Complementing my professional experiences is my academic journey,
-          which includes earning a Master's Degree in Computer Science and
-          Electronics from ISTIC University. My commitment to academic
-          excellence is underscored by certifications such as the Meta Front-End
-          Developer Certificate, Meta Back-End Developer Certificate, and IBM
-          Full-Stack Software Developer Certificate.
-        </p><p>
+          like Next.js.
+        </p><p class="text-xs leading-7">
           Fluent in Arabic, English, and French, I possess professional
           proficiency in all three languages, as demonstrated by certifications
           such as TOEIC L&R and DELF B2.
-        </p><p>
+        </p><p class="text-xs leading-7">
           I am enthusiastic about contributing my skills to innovative projects
           and am open to opportunities both online and abroad. My diverse
           experiences, commitment to academic and professional growth, and

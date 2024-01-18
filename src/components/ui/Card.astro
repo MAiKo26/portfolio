@@ -27,20 +27,21 @@ const {
 } = Astro.props;
 ---
 
-<section class="p-4 md:w-1/2 lg:w-1/3">
+<section class="md:w-9/12 flex justify-center items-center">
   <article
-    data-testId="card"
-    class="rounded-xl bg-white h-full p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
+    class="rounded-xl w-full xl:w-9/12 flex md:flex-row flex-col bg-white h-full p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
   >
-    <div class="hidden relative md:flex items-end overflow-hidden rounded-xl">
+    <div class="relative flex items-end overflow-hidden rounded-xl">
       <Image src={image} alt={alt} width={400} height={400} loading="eager" />
     </div>
-    <div class="mt-1 p-2 flex flex-col gap-2 justify-between">
+    <div class="mt-1 p-2 w-full flex flex-col gap-6 justify-center">
       <div>
-        <h3 class="text-black text-xl text-orange lg:text-2xl">{title}</h3>
+        <h3 class="text-black font-extrabold text-xl text-orange lg:text-2xl">
+          {title}
+        </h3>
         <p class="text-black text-s">{description}</p>
       </div>
-      <div class="flex flex-row gap-2">
+      <div class="flex w-3 flex-row gap-2">
         {
           github ? (
             <a href={github} class="flex-1" aria-label="link to project">

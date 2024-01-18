@@ -90,8 +90,8 @@ const menuitems = [
 
     const body = document.querySelector("body");
     const header = document.querySelector("header");
-    const lightTailWind = "bg-slate-300 text-slate-900 font-mono";
-    const darkTailWind = "bg-slate-900 text-slate-300 font-mono";
+    const lightTailWind = "bg-slate-200 text-slate-900 font-mono";
+    const darkTailWind = "bg-slate-900 text-slate-200 font-mono";
 
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       localStorage.setItem("theme", "dark");
@@ -102,7 +102,7 @@ const menuitems = [
       localStorage.setItem("theme", "light");
       body!.className = lightTailWind;
       header!.className =
-        "py-4  z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-300";
+        "py-4  z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-200";
     }
 
     const switchTheme = () => {
@@ -113,11 +113,11 @@ const menuitems = [
       if (localStorage.getItem("theme") === "dark") {
         body!.className = darkTailWind;
         header!.className =
-          "pt-4 z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-900";
+          "pt-4 z-50 flex flex-col w-full lg:px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-900";
       } else {
         body!.className = lightTailWind;
         header!.className =
-          "pt-4 z-50 flex flex-col w-full px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-300";
+          "pt-4 z-50 flex flex-col w-full lg:px-16 items-center justify-between lg:flex-row border-b-2 fixed bg-slate-300";
       }
     };
 
