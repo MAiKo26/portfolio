@@ -32,7 +32,14 @@ const {
     class="rounded-xl bg-slate-100 p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
   >
     <div class="relative flex items-end overflow-hidden rounded-xl">
-      <Image src={image} alt={alt} width={400} height={400} loading="eager" />
+      <Image
+        src={image}
+        alt={alt}
+        width={400}
+        height={400}
+        format="webp"
+        loading="eager"
+      />
     </div>
     <div class="mt-1 p-2 w-full flex flex-col gap-6 justify-center">
       <div>
