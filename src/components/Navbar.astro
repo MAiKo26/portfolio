@@ -26,7 +26,12 @@ const menuitems = [
       <div class="flex items-center w-full justify-between lg:hidden">
         <MenuIcon class="h-6 w-6" />
         <div class="lg:hidden block">
-          <Switch id="theme-switch2" client:load />
+          <Switch
+            role="Theme Toggle"
+            title="Theme Toggle"
+            id="theme-switch2"
+            client:load
+          />
         </div>
       </div>
     </div>
@@ -41,7 +46,6 @@ const menuitems = [
                 <a href={item.path} class="flex lg:py-2 lg:px-3">
                   <Button
                     className="font-bold text-xl"
-                    id="navbarbuttons"
                     variant="ghost"
                     size="lg"
                   >
@@ -58,7 +62,12 @@ const menuitems = [
           </div>
         </li>
         <li class="hidden lg:block">
-          <Switch id="theme-switch" client:load />
+          <Switch
+            role="Theme Toggle"
+            title="Theme Toggle"
+            id="theme-switch"
+            client:load
+          />
         </li>
       </ul>
     </MenuItems>
