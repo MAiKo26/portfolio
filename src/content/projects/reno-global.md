@@ -1,8 +1,9 @@
 ---
 inProgress: false
+id: 30
 title: Reno-Global
-img_alt: Reno-Global Home Page
-demo: https://global-reno.fr/
-tags: ["Next.js", "React", "Tailwind"]
-image: /reno-global.webp
+img_alt: Reno-Global HomePage
+demo: https://www.global-reno.com/
+tags: ["Next.js", "TypeScript", "Tailwind"]
+image: /images/home/reno-global.webp
 ---

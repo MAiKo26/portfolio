@@ -1,21 +1,44 @@
 ---
-import {Picture} from "astro:assets";
+import GithubIcon from "public/icons/GithubIcon";
+import LinkedinIcon from "public/icons/LinkedinIcon";
+import MailIcon from "public/icons/MailIcon";
+import TwitterIcon from "public/icons/TwitterIcon";
 ---
 
 <section
   class="lg:fixed lg:bottom-0 lg:left-10 lg:pb-0 flex lg:flex-col flex-row items-center justify-center flex-wrap gap-4"
 >
-  <a href="https://github.com/MAiKo26" target="_blank">
-    <Picture src="/github.svg" alt="github logo" width={35} height={35} /></a
+  <a href="https://github.com/MAiKo26" class="group" target="_blank">
+    <GithubIcon
+      className="text-blue transition-all ease-in-out duration-300 group-hover:text-primary-foreground group-hover:scale-110"
+      width={35}
+      height={35}
+    />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/mohamed-aziz-karoui/"
+    class="group"
+    target="_blank"
   >
-  <a href="https://www.linkedin.com/in/mohamed-aziz-karoui/" target="_blank">
-    <Picture src="/linkedin.svg" alt="github logo" width={35} height={35} /></a
+    <LinkedinIcon
+      className="text-blue transition-all ease-in-out duration-300 group-hover:text-primary-foreground group-hover:scale-110"
+      width={35}
+      height={35}
+    /></a
   >
-  <a href="https://twitter.com/MAiKo26_" target="_blank">
-    <Picture src="/twitter.svg" alt="github logo" width={35} height={35} /></a
+  <a href="https://x.com/MAiKo26_" class="group" target="_blank">
+    <TwitterIcon
+      className="text-blue transition-all ease-in-out duration-300 group-hover:text-primary-foreground group-hover:scale-110"
+      width={35}
+      height={35}
+    /></a
   >
-  <a href="mailto:contact.mohamedazizkaroui@gmail.Com">
-    <Picture src="/mail.svg" alt="github logo" width={35} height={35} /></a
+  <a href="mailto:contact.mohamedazizkaroui@gmail.Com" class="group">
+    <MailIcon
+      className="text-blue transition-all ease-in-out duration-300 group-hover:text-primary-foreground group-hover:scale-110"
+      width={35}
+      height={35}
+    /></a
   >
   <div class="hidden lg:block bg-sky-600 h-28 w-1"></div>
 </section>

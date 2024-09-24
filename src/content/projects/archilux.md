@@ -1,8 +1,9 @@
 ---
 inProgress: false
+id: 1
 title: ArchiLux
-img_alt: ArchiLux Home Page
-demo: https://www.archilux.fr/
-tags: ["Next.js", "React", "Tailwind"]
-image: /archilux.webp
+img_alt: ArchiLux HomePage
+demo: https://www.archi-lux.fr/
+tags: ["Next.js", "TypeScript", "Tailwind"]
+image: /images/home/archilux.webp
 ---
