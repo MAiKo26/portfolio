@@ -1,6 +1,5 @@
-import {defineConfig} from "astro/config";
 import react from "@astrojs/react";
-import vercel from "@astrojs/vercel/serverless";
+import {defineConfig} from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -8,10 +7,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://maiko26.github.io",
   base: "portfolio",
-  output: "server",
-  adapter: vercel({
-    webAnalytics: {enabled: true},
-  }),
   integrations: [
     react(),
     tailwind({
