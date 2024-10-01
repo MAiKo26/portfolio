@@ -6,6 +6,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://maiko26.github.io",
+  base: "portfolio",
   output: "server",
   adapter: vercel({
     webAnalytics: {enabled: true},
